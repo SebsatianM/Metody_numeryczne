@@ -15,12 +15,11 @@ g = 9.81
 kat_end = 45
 def rzut_ukosny(unknown_param):
     v0, kat = unknown_param
-    t = (2*v0*math.sin(math.radians(kat)))/g
-    f_x = v0 * math.cos(math.radians(kat)) * t - 10
-    f_y = v0 * math.sin(math.radians(kat)) * t - ((g * t ** 2) / 2) - 1
-    
+    t = dl / (v0*math.cos(math.radians(kat)))
+    f_x = v0 * math.sin(math.radians(kat)) * t - ((g * t**2)/2) - 1
+    f_y = v0 * (math.cos(math.radians(kat))+math.sin(math.radians(kat))) -(g*t)
     return [f_x, f_y]
     
-wynik = optimize.fsolve(rzut_ukosny, [10.6,math.radians(kat_end)])
+wynik = optimize.fsolve(rzut_ukosny, [10.4,math.radians(kat_end)])
 print("Prędkość początkowa: ", wynik[0],)
-print("Kąt początkowy: ",math.degrees(wynik[1]),)
+print("Kąt początkowy: ",wynik[1])
