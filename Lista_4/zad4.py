@@ -8,6 +8,7 @@ def calc(x):
     if x1.success:
         print(x1.x,' ',x1.nfev)
 
+#jest to oszacowany na podstawie wykresu 'wykres_do_4.png' zakres x-ów w którym mogą być miejsca przecięcia się dwóch funkcji
 x1 = np.array([-1.450, -1.260])
 x2 = np.array([-0.750, -0.700])
 x3 = np.array([1.200, 1.210])
