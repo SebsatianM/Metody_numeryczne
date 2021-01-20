@@ -1,8 +1,6 @@
 import numpy as np
 import scipy.linalg as sc
 
-# Matrix norm
-
 print("Norma dla 5-elementowej macierzy Hilberta:",np.linalg.norm(sc.hilbert(5)))
 print("Norma dla 10-elementowej macierzy Hilberta:",np.linalg.norm(sc.hilbert(10)))
 print("Norma dla 20-elementowej macierzy Hilberta:",np.linalg.norm(sc.hilbert(20)))
